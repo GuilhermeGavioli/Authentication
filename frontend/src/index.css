@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body{
+    font-family: sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #1C5CBE, #C84490);
+}
+
+input{
+    outline: none;
+}
