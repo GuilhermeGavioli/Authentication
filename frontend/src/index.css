@@ -11,6 +11,7 @@ body{
     position: relative;
     height: 100vh;
     background-image: linear-gradient(to bottom right, #1C5CBE, #C84490);
+    z-index: -10;
 }
 
 input{
