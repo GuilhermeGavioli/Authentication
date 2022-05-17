@@ -8,9 +8,13 @@ app.use(cors({
 }))
 
 
+import accountRouter from './routes/accountRouter'
+
 app.get('/test', (req, res) => { 
     res.status(200).json({user: "guilherme gavioli"});
 })
+
+app.use('/account', accountRouter)
 
 
 
