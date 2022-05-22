@@ -1,15 +1,14 @@
-
-
-
 interface IInputProps { 
     labelText: string;
     icon?: any;
     type?: string;
+    changeFunction: any;
 }
-  
 
-export default function Input({ labelText, icon, type }: IInputProps) {
-   
+
+
+export default function Input({ labelText, icon, type, changeFunction }: IInputProps) {
+    
 
 
     return (
@@ -19,7 +18,7 @@ export default function Input({ labelText, icon, type }: IInputProps) {
         
             <input type={type || "text"} className="
       placeholder-gray-500  text-sm font-medium 
-      w-full h-10 bg-gray-100/[90%] px-4 py-4 rounded-sm text-gray-600" placeholder={labelText}>
+      w-full h-10 bg-gray-100/[90%] px-4 py-4 rounded-sm text-gray-600" max={255} placeholder={labelText} onChange={(e)=> changeFunction(e.target.value)}>
             </input>
         
         </div>
