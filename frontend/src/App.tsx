@@ -3,6 +3,7 @@ import { LockClosedIcon, UserIcon, ChevronDoubleRightIcon } from '@heroicons/rea
 //pages
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
  
 //components
 import BlobButton from './components/BlobButton';
@@ -25,6 +26,7 @@ export default function App() {
    
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register/>} />
+          <Route path="/dashboard" element={<Dashboard/>} />
 
        </Routes>
       </BrowserRouter>
