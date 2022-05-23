@@ -1,5 +1,5 @@
 import express from 'express'
-import cors from 'cors'
+// import cors from 'cors'
 
 const app = express();
 
@@ -13,9 +13,9 @@ connect();
 
 
 
-app.use(cors({
-    origin: endpoints.allowedUrls
-}))
+// app.use(cors({
+//     origin: endpoints.allowedUrls
+// }))
 
 app.use(express.json())
 import accountRouter from './routers/accountRouter'
