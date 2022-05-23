@@ -28,7 +28,7 @@ export default function Register() {
   useEffect(() => {
     async function check() {
       if (await cookies['Authorization-cookie'] === undefined) return;
-      const res = await fetch(process.env.ENDPOINT_URL + "/account/checktoken", {
+      const res = await fetch("https://backendauthentication.herokuapp.com" + "/account/checktoken", {
         headers: {"Content-Type": "application/json", "Authorization": cookies['Authorization-cookie']}
       })
       if (res.status === 200) redirect();
@@ -41,7 +41,7 @@ export default function Register() {
 
 
   const handleRegister = async () => {
-    const res = await fetch(process.env.ENDPOINT_URL + "/account/register", {
+    const res = await fetch("https://backendauthentication.herokuapp.com" + "/account/register", {
       method: "POST",
       body: JSON.stringify({ name: registerName, email: registerEmail, password: registerPassword }),
       headers: {"Content-Type": "application/json"}

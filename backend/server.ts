@@ -1,5 +1,5 @@
 import express from 'express'
-// import cors from 'cors'
+import cors from 'cors'
 
 const app = express();
 
@@ -13,9 +13,9 @@ connect();
 
 
 
-// app.use(cors({
-//     origin: endpoints.allowedUrls
-// }))
+app.use(cors({
+    origin: endpoints.allowedUrls
+}))
 
 app.use(express.json())
 import accountRouter from './routers/accountRouter'
@@ -28,4 +28,4 @@ app.get('/test', (req, res) => {
 app.use('/account', accountRouter)
 
 
-app.listen(endpoints.PORT, () => console.log('listening'))
+app.listen(endpoints.PORT || 3001, () => console.log('listening'))

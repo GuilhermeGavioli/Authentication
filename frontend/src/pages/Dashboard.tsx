@@ -24,7 +24,7 @@ export default function Dashboard() {
   useEffect(() => {
     async function check() {
         if (await cookies['Authorization-cookie'] === undefined) redirect();
-      const res = await fetch(process.env.ENDPOINT_URL + "/account/login", {
+      const res = await fetch("https://backendauthentication.herokuapp.com" + "/account/login", {
         headers: {"Content-Type": "application/json", "Authorization": cookies['Authorization-cookie']}
       })
       const data = await res.json();
