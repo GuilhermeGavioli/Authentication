@@ -16,7 +16,7 @@ app.use(cors({
 }))
 
 app.use(express.json())
-import accountRouter from './routes/accountRouter'
+import accountRouter from './routers/accountRouter'
 
 app.get('/test', (req, res) => { 
     
