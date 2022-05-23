@@ -25,7 +25,7 @@ export default function Login() {
   useEffect(() => {
     async function check() {
       if (await cookies['Authorization-cookie'] === undefined) return;
-      const res = await fetch("http://localhost:3001/account/checktoken", {
+      const res = await fetch(process.env.ENDPOINT_URL + "/account/checktoken", {
         headers: {"Content-Type": "application/json", "Authorization": cookies['Authorization-cookie']}
       })
       if (res.status === 200) redirect();
@@ -35,7 +35,7 @@ export default function Login() {
   }, [])
 
   const handleLogin = async () => {
-    const res = await fetch("http://localhost:3001/account/login", {
+    const res = await fetch(process.env.ENDPOINT_URL + "/account/login", {
       method: "POST",
       body: JSON.stringify({ email: loginEmail, password: loginPassword }),
       headers: {"Content-Type": "application/json"}

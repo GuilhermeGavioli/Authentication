@@ -6,19 +6,21 @@ const app = express();
 import dotenv from 'dotenv'
 dotenv.config();
 
+import { endpoints } from './endpoints';
 import { connect } from './database/connection'
 
 connect();
 
 
+
 app.use(cors({
-    origin: "http://localhost:3000"
+    origin: endpoints.allowedUrls
 }))
 
 app.use(express.json())
 import accountRouter from './routers/accountRouter'
 
-app.get('/test', (req, res) => { 
+app.get('/test', (req, res) => {
     
     res.status(200).json({user: "guilherme gavioli"});
 })
@@ -26,5 +28,4 @@ app.get('/test', (req, res) => {
 app.use('/account', accountRouter)
 
 
-
-app.listen(3001, () => console.log('listening'))
+app.listen(endpoints.PORT, () => console.log('listening'))
