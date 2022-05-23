@@ -10,13 +10,13 @@ export class CheckTokenRouter {
         return async (req: Request, res: Response) => {
             const sentToken = req.headers.authorization
             if (sentToken === undefined) {
-                return res.status(400).json({ message: "No token provided" })
+                return res.status(200).json({ isTokenValid: false, message: "No token provided" })
             }
             try {
                 const decoded = jwt.verify(sentToken, endpoints.secretToken)
-                return res.status(200).json({ body: { user: decoded }})
+                return res.status(200).json({ isTokenValid: true, body: { user: decoded }})
             } catch (e: unknown) {
-                return res.status(400).json({message: "Token invalid"})
+                return res.status(200).json({ isTokenValid: false, message: "Token invalid"})
             }
          }
     }

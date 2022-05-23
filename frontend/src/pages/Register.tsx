@@ -31,7 +31,9 @@ export default function Register() {
       const res = await fetch("https://backendauthentication.herokuapp.com" + "/account/checktoken", {
         headers: {"Content-Type": "application/json", "Authorization": cookies['Authorization-cookie']}
       })
-      if (res.status === 200) redirect();
+      const data = await res.json();
+      if (data.isTokenValid) return redirect();
+      return
     }
 
     check();

@@ -28,7 +28,7 @@ export default function Dashboard() {
         headers: {"Content-Type": "application/json", "Authorization": cookies['Authorization-cookie']}
       })
       const data = await res.json();
-        if (res.status === 200) {
+        if (data.isTokenValid) {
             setUser(data.body.user.email.split('@')[0])
             return
         }

@@ -13,9 +13,9 @@ connect();
 
 
 
-app.use(cors({
-    origin: endpoints.allowedUrls
-}))
+app.use(cors(
+    // { origin: endpoints.allowedUrls } disblad for now -test
+))
 
 app.use(express.json())
 import accountRouter from './routers/accountRouter'
