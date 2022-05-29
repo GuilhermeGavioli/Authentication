@@ -42,7 +42,8 @@ export default function Register() {
 
 
 
-  const handleRegister = async () => {
+  const handleRegister = async (e) => {
+    e.preventDefault();
     const res = await fetch("https://backendauthentication.herokuapp.com" + "/account/register", {
       method: "POST",
       body: JSON.stringify({ name: registerName, email: registerEmail, password: registerPassword }),
@@ -65,7 +66,7 @@ export default function Register() {
   return (
 
       
-    <div className=" absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-60%] flex flex-col align-middle justify-evenly m-auto w-72 h-96 text-gray-200 blur-none ">
+    <form className=" absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-60%] flex flex-col align-middle justify-evenly m-auto w-72 h-96 text-gray-200 blur-none ">
 
       
       <Helmet>
@@ -81,7 +82,7 @@ export default function Register() {
         <Input icon={<LockClosedIcon/>} labelText="Password" type="password" changeFunction={setRegisterPassword}></Input>
         <Button actionFunction={handleRegister}>Register</Button>
         <p className="text-xs text-center mt-6">Have an account already? <Link to="/login" className="text-amber-300 text-sm font-semibold italic ml-1 :hover">Login</Link></p>
-    </div>
+    </form>
          
  
   )

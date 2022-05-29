@@ -38,7 +38,8 @@ export default function Login() {
     setPageLoading(false);
   }, [])
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault();
     const res = await fetch("https://backendauthentication.herokuapp.com" + "/account/login", {
       method: "POST",
       body: JSON.stringify({ email: loginEmail, password: loginPassword }),
@@ -67,7 +68,7 @@ export default function Login() {
         <meta name="description" content="Have an account already? Login to a better experience in our website." />
         <link rel="canonical" href="/login" />
       </Helmet>
-  <div className=" absolute top-[45%] left-[50%] translate-x-[-50%] translate-y-[-60%] flex flex-col align-middle justify-evenly m-auto w-72 h-80 text-gray-200 blur-none ">
+  <form className=" absolute top-[45%] left-[50%] translate-x-[-50%] translate-y-[-60%] flex flex-col align-middle justify-evenly m-auto w-72 h-80 text-gray-200 blur-none ">
       
     <h1 className="font-normal text-3xl text-center mb-5">Login</h1>   
         <Input icon={<MailIcon />} labelText="Email" changeFunction={setLoginEmail}></Input>
@@ -75,7 +76,7 @@ export default function Login() {
         <Button actionFunction={handleLogin}>Login</Button>
     <p className="text-xs text-center mt-6">Don't have an account already? <Link to="/register" className="text-amber-300 text-sm font-semibold italic ml-1 :hover">Register now</Link></p>
         {/* <p>{errorMessage}</p> */}
-  </div>
+  </form>
       <div>
         </div>
   </div>
