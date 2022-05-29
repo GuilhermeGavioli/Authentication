@@ -24,7 +24,7 @@ An application where the authentication system was implemented using tools such 
 &nbsp;
 
 
-which shows that only authorized users can have access to certain applications pages or functionalities, in this case, the dashboard page using client-side-rendering.
+which shows that only authorized users can have access to certain application pages or functionalities, in this case, the dashboard page using client-side-rendering.
 
 
 &nbsp;
@@ -39,21 +39,37 @@ Later on, it might be added functionalities to logged in users (authorized users
 &nbsp;
 
 # Screen shots
-register: https://i.imgur.com/L9dZxPQ.png
+register:
 
-login: https://i.imgur.com/A7Ngi7b.png
+![alt text](https://i.imgur.com/L9dZxPQ.png)
 
-dashboard: https://i.imgur.com/OCCxJIE.png
+login:
 
-hover: https://i.imgur.com/UTS7Yfn.png
+![alt text](https://i.imgur.com/A7Ngi7b.png)
+
+dashboard:
+
+![alt text](https://i.imgur.com/OCCxJIE.png)
+
+btn-hover-animation:
+
+![alt text](https://i.imgur.com/UTS7Yfn.png)
 
 &nbsp;
 
 # Deployed version
 
-to Vercel: https://authentication2-lac.vercel.app/login
+* frontend:
+
+    * to Vercel: https://authentication2-lac.vercel.app/login
+
+    * to Heroku: https://frontendauthentication.herokuapp.com/login
+
+* backend:
+    * to Heroku: https://backendauthentication.herokuapp.com/test
 
 &nbsp;
+
 # Installation and Setup Instructions
 Clone down this repository. You will need node and npm installed globally on your machine.
 
@@ -92,7 +108,9 @@ To run the server (optional):
     npm run start
 ```
 
-Most of the routes are for post requests.
+Most of the routes are for post requests. To use them you will need a tool for post requests. Also some functionalities may not work once environment variables are used in the backend.
+
+&nbsp;
 
 # Reflection
 
@@ -106,5 +124,5 @@ It was an Experimental project. The main Idea was to implement an authorization/
 Some good learnings were:
 * Connecting backend and frontend, CORS policy.
 * Dealing with deploy issues.
-* Using helmet with react to help CEO.
+* Using helmet with react to help a bit in CEO.
 
