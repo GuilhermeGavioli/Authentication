@@ -1,11 +1,8 @@
 import { ChevronDoubleRightIcon } from "@heroicons/react/solid"
 
-interface IButtonProps { 
-    children: string;
-    actionFunction: any;
-}
+
   
-export default function Button({ children, actionFunction }: IButtonProps) { 
+export default function Button({ children, actionFunction }) { 
     return <button className=" text-gray-200 bg-gradient-to-br from-sky-600 to-sky-400 px-4 text-xl py-2 font-bold rounded-3xl w-full mt-2 relative scale-100
     hover:scale-110 ease-in duration-150 shadow-md shadow-sky-700/70 hover:shadow-pink-700/40 group" onClick={() => actionFunction()}>
       <div className="w-full ease-in-out duration-300 float-none overflow-clip

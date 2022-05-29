@@ -1,4 +1,4 @@
-import { LockClosedIcon, UserIcon, ChevronDoubleRightIcon } from '@heroicons/react/solid'
+// import { LockClosedIcon, UserIcon, ChevronDoubleRightIcon } from '@heroicons/react/solid'
 
 //pages
 import Login from './pages/Login';

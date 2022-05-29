@@ -1,13 +1,8 @@
-interface IInputProps { 
-    labelText: string;
-    icon?: any;
-    type?: string;
-    changeFunction: any;
-}
 
 
 
-export default function Input({ labelText, icon, type, changeFunction }: IInputProps) {
+
+export default function Input({ labelText, icon, type, changeFunction }) {
     
 
 

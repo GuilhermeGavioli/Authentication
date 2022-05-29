@@ -5,11 +5,11 @@ import Input from '../components/Input';
 import Button from '../components/Button';
 import Loading from '../components/Loading';
 
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate} from 'react-router-dom';
 import { useCookies } from 'react-cookie'
 import { useState, useEffect } from 'react';
 // export const LoginDataContext = createContext("LoginDataContext");
-import { Navigate, useNavigate } from 'react-router-dom'
+
 
 
 export default function Login() {
