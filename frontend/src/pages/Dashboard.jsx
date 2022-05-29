@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button';
 import Loading from '../components/Loading';
 
+import { Helmet } from 'react-helmet-async';
+
 export default function Dashboard() {
 
   
@@ -42,9 +44,19 @@ export default function Dashboard() {
     
     
 
-    return (
+  return (
+      
      
-            <div>
+    <div>
+      
+      <Helmet>
+        <title>Welcome, {user}!</title>
+        <meta name="description" content="Dashboard / profile page restrict only for loged in users in our website." />
+        <meta name="robots" content="noindex" />
+        {/* //wont be crawled by seo */}
+        <link rel="canonical" href="/dashboard" />
+      </Helmet>
+
             <h1 className="text-3xl text-white text-center font-bold pt-[15%] h-64">Welcome, {user}!</h1>
             <div className="w-64 m-auto">
                 <Button actionFunction={Logout}>Logout</Button>

@@ -8,7 +8,7 @@ import Loading from '../components/Loading';
 
 import { useCookies } from 'react-cookie';
 
-
+import { Helmet } from 'react-helmet-async';
 
 import { useState, useEffect } from 'react';
 
@@ -67,6 +67,12 @@ export default function Register() {
       
     <div className=" absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-60%] flex flex-col align-middle justify-evenly m-auto w-72 h-96 text-gray-200 blur-none ">
 
+      
+      <Helmet>
+        <title>Register</title>
+        <meta name="description" content="Do not have an account on our website? Register now." />
+        <link rel="canonical" href="/register" />
+      </Helmet>
 {/* absolute top-[45%] left-[50%] translate-x-[-50%] translate-y-[-60%] flex flex-col align-middle justify-evenly m-auto w-72 h-80 text-gray-200 blur-none"> */}
       
         <h1 className="font-normal text-3xl text-center mb-5">Register</h1>

@@ -5,10 +5,12 @@ import Input from '../components/Input';
 import Button from '../components/Button';
 import Loading from '../components/Loading';
 
-import { Link, Navigate, useNavigate} from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import { useCookies } from 'react-cookie'
 import { useState, useEffect } from 'react';
 // export const LoginDataContext = createContext("LoginDataContext");
+
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -60,6 +62,11 @@ export default function Login() {
 
   return (
     <div>
+      <Helmet>
+        <title>Login</title>
+        <meta name="description" content="Have an account already? Login to a better experience in our website." />
+        <link rel="canonical" href="/login" />
+      </Helmet>
   <div className=" absolute top-[45%] left-[50%] translate-x-[-50%] translate-y-[-60%] flex flex-col align-middle justify-evenly m-auto w-72 h-80 text-gray-200 blur-none ">
       
     <h1 className="font-normal text-3xl text-center mb-5">Login</h1>   

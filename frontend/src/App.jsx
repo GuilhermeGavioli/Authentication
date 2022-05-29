@@ -15,6 +15,8 @@ import {
   // Link
 } from "react-router-dom";
 
+
+
 export default function App() {
   
 
@@ -24,9 +26,9 @@ export default function App() {
       <BrowserRouter>
        <Routes>
    
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register/>} />
-          <Route path="/dashboard" element={<Dashboard/>} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/register" element={<Register/>} />
+          <Route exact path="/dashboard" element={<Dashboard/>} />
 
        </Routes>
       </BrowserRouter>
