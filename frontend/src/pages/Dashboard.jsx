@@ -53,7 +53,7 @@ export default function Dashboard() {
         <title>Welcome, {user}!</title>
         <meta name="description" content="Dashboard / profile page restrict only for loged in users in our website." />
         <meta name="robots" content="noindex" />
-        {/* //wont be crawled by seo */}
+        
         <link rel="canonical" href="/dashboard" />
       </Helmet>
 

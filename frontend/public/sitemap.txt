@@ -1,0 +1,3 @@
+https://authentication2-lac.vercel.app/login
+https://authentication2-lac.vercel.app/register
+https://authentication2-lac.vercel.app/dashboard
